@@ -29,7 +29,7 @@ def getArticles(max_page, categoryNumber):
     for page in range(max_page):
         print(f"{page+1} 완성")
         result = requests.get(
-            f"{URL+categoryNumber}?listSize=60&page={3}", headers=HEADERS).text
+            f"{URL+categoryNumber}?listSize=60&page={page+1}", headers=HEADERS).text
         soup = BeautifulSoup(result, "html.parser")
 
         # 카테고리
