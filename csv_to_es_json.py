@@ -14,7 +14,7 @@ def csv_to_json(csvFilePath, jsonFilePath):
             csvReader = csv.DictReader(csvf)
             for row in csvReader:
                 count = count + 1
-                x = OrderedDict([('index', {"_index" : "article8", "_id" : f"{count}"})])
+                x = OrderedDict([('index', {"_index" : "article", "_id" : f"{count}"})])
                 jsonString = json.dumps(x)
                 jsonf.write(jsonString)
                 jsonf.write("\n")
